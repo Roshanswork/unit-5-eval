@@ -1,20 +1,10 @@
 
-import { useState } from "react";
+
 import "../App.css";
 
 export const MainPage = () => {
-  const [text, setText] = useState("");
-  const [data, setData] = useState([]);
-  console.log(data);
-  console.log(text);
+ 
 
-  const search = () => {
-    fetch(`https://fast-reef-22226.herokuapp.com/data/search?q=${text}`)
-      .then((d) => d.json())
-      .then((res) => {
-          console.log(res)
-      });
-  };
   return (
     <div>
       <div className="google-img">
@@ -27,11 +17,9 @@ export const MainPage = () => {
         className="search-box"
         type="text"
         placeholder="Search here.."
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
+        
       />
-     <button className="search-btn" onClick={search}>
+     <button className="search-btn" >
         Search
       </button>
     </div>
