@@ -14,6 +14,7 @@ export const SearchPage = () => {
   useEffect(() => {
     getData();
   }, []);
+  
 
   return (
     <div>
